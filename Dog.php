@@ -1,8 +1,6 @@
 <?php
-
-class Dog {
-    public $name;
-    private $age = 0;
+require_once "Animal.php";
+class Dog extends Animal {
 
     function __construct($n, $a){
         $this->name = $n;
@@ -10,13 +8,8 @@ class Dog {
     }
 
 
-    function birthday(){
-        $this->age++;
-        return $this->age;
-    }
-
-    static function woof(){
-        echo "woof!";
+     static function eat(){
+        echo "I like bones! <br>";
     }
 }
 

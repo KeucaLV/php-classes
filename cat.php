@@ -1,20 +1,16 @@
 <?php
-
-class Cat {
-    public $name;
-    private $age = 0;
+require_once "Animal.php";
+class Cat extends Animal {
 
     function setName($name){
         $this->name = $name;
     }
 
-
-    function birthday(){
-        $this->age++;
-        return $this->age;
+    function __construct(){
+        echo "Puss in Boots <br>";
     }
 
-    static function moew(){
-        echo "moew!";
+    static function eat(){
+        echo "I like whiskas!";
     }
 }
